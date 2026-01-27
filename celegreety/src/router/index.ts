@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import TalentPricingManagement from '../pages/TalentPricingManagement.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: TalentPricingManagement }
+  { path: '/', redirect: '/login' },
+  { path: '/pricing', component: TalentPricingManagement },
 ]
 
-const router = createRouter({
+export default createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
-
-export default router
