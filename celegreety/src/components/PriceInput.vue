@@ -37,14 +37,14 @@ watch(
 </script>
 
 <template>
-  <div class="flex flex-col mb-4">
+  <div class="flex flex-col mb-4 border border-gray-100 p-2 rounded-lg">
     <label class="mb-1 font-semibold capitalize">{{ props.type }} Price (€)</label>
     <input
       type="number"
       min="0"
       step="0.01"
       v-model="inputValue"
-      class="input input-bordered"
+      class="input input-bordered border border-gray-300 p-2 rounded-lg"
       :class="{ 'input-error': !isValid }"
     />
     <span v-if="!isValid" class="text-red-500 text-sm mt-1">Must be greater than 0</span>
